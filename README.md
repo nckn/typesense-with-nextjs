@@ -17,6 +17,7 @@ mkdir /tmp/typesense-data
 ./typesense-server --data-dir=/tmp/typesense-data --api-key=$TYPESENSE_API_KEY --enable-cors
 ```
 ($ ./typesense-server --data-dir=data --api-key=xyz --enable-cors)
+$ ./typesense-server --data-dir=/tmp/typesense-data --api-key=xyz --enable-cors
 should work fine
 
 Check if okay
