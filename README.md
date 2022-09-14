@@ -1,4 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Part 1
+https://www.youtube.com/watch?v=kwtHOkf7Jdg
+Exploring Typesense, a lightning-fast, open source search engine
+
+Part 2
+https://www.youtube.com/watch?v=cIU19iA8I7U
+Building a Search App in React.js using Typesense, Next.js & Tailwind CSS
+
+
+First install Typesense
+$ brew install typesense/tap/typesense-server@0.23.1
+
+Run it
+```
+export TYPESENSE_API_KEY=xyz
+mkdir /tmp/typesense-data
+./typesense-server --data-dir=/tmp/typesense-data --api-key=$TYPESENSE_API_KEY --enable-cors
+```
+($ ./typesense-server --data-dir=data --api-key=xyz --enable-cors)
+should work fine
+
+Check if okay
+$ curl http://localhost:8108/health
+
+
+
+Install project
+$ pnpm dlx create-next-app --typescript typesense-with-nextjs
+
+Install tailwind
+$ pnpm add tailwindcss@latest postcss@latest autoprefixer@latest
+
+Init tailwind
+$ pnpm dlx tailwindcss init -p
+
+Add Typesense
+$ pnpm add typesense-instantsearch-adapter react-instantsearch-dom
+(fix if error)
+$ pnpm add @babel/runtime algoliasearch
+
+
+
+
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://
+github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
